@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	$('#wait_data').attr("src", "images_fac/gif/reload.gif");
 	$('#wait_data').show();
-	$.post("includes_php_fac/getdata_user.php", function(){
+	$.post("http://cdcom.dynalias.com/facturalion2/includes_php_fac/getdata_user.php", function(){
 		
 	})
 	.done(function(result) {

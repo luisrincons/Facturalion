@@ -1,7 +1,7 @@
 //profile.js
 $(document).ready(function() {
 	$.ajax({
-	url: 'includes_php_fac/getdata_user.php',
+	url: 'http://cdcom.dynalias.com/facturalion2/includes_php_fac/getdata_user.php',
 	dataType: 'json',
 	beforeSend: function(xhr) {
       $.spin('true');
@@ -21,7 +21,7 @@ $(document).ready(function() {
 		  $("#domicilio_fiscal").html(domicilio);		  
 		  return;
 		} else {
-		  window.location.href = "includes_php_fac/_logout.php";
+		  window.location.href = "http://cdcom.dynalias.com/facturalion2/includes_php_fac/_logout.php";
 		  return;	
 		}
 	}).fail(function(xhr, textStatus, errorThrown) {
