@@ -14,9 +14,8 @@
     </author>
 	
     <icon src="images/icon/android/icon.png" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.dialogs" source="npm" ></gap:plugin>
     <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.network-information" />	
 	
 </widget>
