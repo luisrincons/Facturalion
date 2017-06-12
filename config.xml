@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns = "http://www.w3.org/ns/widgets"
+<widget xmlns = "http://www.w3.org/ns/widgets"
 
-        xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.computadoraspc.facturalion"
-        version     = "2.0.1"
-        versionCode = "1.0.1" >
+	xmlns:gap   = "http://phonegap.com/ns/1.0"
+	id          = "com.computadoraspc.facturalion"
+	version     = "2.0.2"
+	versionCode = "1.0.2" >
 
-        <!-- versionCode is optional and Android only -->
+	<!-- versionCode is optional and Android only -->
 
-        <preference name="phonegap-version" value="3.7.0" />
+	<preference name="phonegap-version" value="3.7.0" />
 
-        <name>Facturalion</name>
+	<name>Facturalion</name>
 
-        <description>
-            Sistema de facturación electrónica (SAT).
-        </description>
+	<description>
+		Sistema de facturación electrónica (SAT).
+	</description>
 
-        <author href="http://www.computadoraspc.com" email="sistemas.cdcomdemexico@gmail.com">
-            Luis Alvaro Rincón Saldaña
-        </author>
-        
-        <icon src="images/logo.png" />
-        <gap:plugin  name="org.apache.cordova.dialogs" source="npm" ></gap:plugin>
-        <gap:plugin name="org.apache.cordova.file-transfer" source="npm" ></gap:plugin>
+	<author href="http://www.computadoraspc.com" email="sistemas.cdcomdemexico@gmail.com">
+		Luis Alvaro Rincón Saldaña
+	</author>
+	
+	<icon src="images/logo.png" />
+	<gap:plugin  name="org.apache.cordova.dialogs" source="npm" ></gap:plugin>
+	<gap:plugin name="org.apache.cordova.file-transfer" source="npm" ></gap:plugin>
 
-    </widget>
+</widget>

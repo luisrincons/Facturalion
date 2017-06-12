@@ -6,39 +6,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Facturalion | Perfil</title>
-
+  <title>Facturalion | Inicio</title>
+  
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
-
+  
   <link href="css/custom.css" rel="stylesheet">
   <link href="css/icheck/flat/green.css" rel="stylesheet">
-
+  
   <script src="js/jquery.min.js"></script>
   <script src="includes_js_fac/spin.js"></script>
-  <script src="includes_js_fac/spin_config.js"></script>    
-  <script src="includes_js_fac/profile.js"></script>
-
+  <script src="includes_js_fac/spin_config.js"></script>  
+  <script src="includes_js_fac/invoices_month.js"></script>
+  
 </head>
 
-
 <body class="nav-md">
-
   <div class="container body">
-
-
     <div class="main_container">
-
+	
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
-
+		
           <div class="navbar nav_title" style="border: 0;">
-            <a href="#" class="site_title"><img src="images_fac/icon/logo/cdcom_mexico.png" width="24" height="22" /> <span>Facturalion</span></a>
+            <a href="" class="site_title"><img src="images_fac/icon/logo/cdcom_mexico.png" width="24" height="22" /> <span>Facturalion</span></a>
           </div>
           <div class="clearfix"></div>
-
+		  
           <div class="profile">
             <div class="profile_pic">
               <img src="images/img.jpg" alt="..." class="img-circle profile_img">
@@ -49,7 +44,7 @@
             </div>
           </div>
           <br />
-
+		  
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
@@ -68,7 +63,7 @@
 					</li>
               </ul>
             </div>
-		  
+
           </div>
           <!-- /sidebar menu -->
 
@@ -108,84 +103,87 @@
       </div>
       <!-- /top navigation -->
 
+
       <!-- page content -->
       <div class="right_col" role="main">
 
-        <div class="">
-          <div class="page-title">
-				<div class="title_left">
-				  <h3>Perfil</h3>
-				</div>
-
-				<div class="title_right">
-				  <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-					<div class="input-group">
-
-					</div>
-				  </div>
-				</div>
-          </div>
+	  
+        <!-- top tiles -->
+        <div class="row tile_count">
+		  <h1>&nbsp;Año <span id="year_selected_value"></span></h2>
 		  
-          <div class="clearfix"></div>
+		  <a class="btn btn-app" href="home.html">
+			<i class="fa fa-home"></i> Inicio
+		  </a>
+		  <a class="btn btn-app" href="invoice_new.html">
+			<i class="fa fa-plus-square-o"></i> Nuevo
+		  </a>		  
+		  <a class="btn btn-app" href="invoices_year.html">
+			<i class="fa fa-history"></i> Regresar
+		  </a>
+		  
+		  <h2>&nbsp;Facturas emitidas [Selecciona el MES]</h2>		
+          <div id="icons" class="row">
+		  </div><!-- /.row -->
+			
+        </div>
+        <!-- /top tiles -->
 
-          <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="x_panel">
-			  
-						<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-							<img id="profile_logo" src="images/facturalion.png" alt="Logotipo" >
-						</div>					
-			  			
-				
-						<div class="x_content">
-						  <p class="lead">Información fiscal del emisor</p>
-						  <table class="table table-striped">
-							<tbody>
-							  <tr>
-								<td>Persona</td>
-								<td><span id="data_contribuyente"></span></td>
-							  </tr>
-							  <tr>
-								<td>Núm.Certificado</td>
-								<td><span id="data_certificado"></span></td>
-							  </tr>
-							  <tr>
-								<td>Tipo de Régimen</td>
-								<td><span id="data_regimen"></span></td>
-							  </tr>
-							  <tr>
-								<td>RFC</td>
-								<td><span id="data_rfc"></span></td>
-							  </tr>												  
-							  <tr>
-								<td>CURP</td>
-								<td><span id="data_curp"></span></td>
-							  </tr>												  
-							  <tr>
-								<td>Nombre</td>
-								<td><span id="data_nombre"></span></td>
-							  </tr>												  
-							  <tr>
-								<td>Registro Patronal</td>
-								<td><span id="data_regpatronal"></span></td>
-							  </tr>												  
-							  <tr>
-								<td>Correo</td>
-								<td><span id="data_correo"></span></td>
-							  </tr>
-							  <tr>
-								<td>Domicilio</td>
-								<td><span id="domicilio_fiscal"></span></td>
-							</tbody>
-						  </table>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
 
-						</div>
+          </div>
 
-					</div>
-				  
-                </div>
-				
-				
+        </div>
+        <br />
+
+        <div class="row">
+
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+
+          </div>
+
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+
+          </div>
+
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+
+          </div>
+
+
+          <div class="col-md-8 col-sm-8 col-xs-12">
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+
+              </div>
+
+            </div>
+            <div class="row">
+
+              <!-- Start to do list -->
+              <div class="col-md-6 col-sm-6 col-xs-12">
+
+              </div>
+              <!-- End to do list -->
+              
+              <!-- start of weather widget -->
+              <div class="col-md-6 col-sm-6 col-xs-12">
+
+              </div>
+              <!-- end of weather widget -->
             </div>
           </div>
         </div>
@@ -211,7 +209,7 @@
   </div>
 
   <script src="js/bootstrap.min.js"></script>
-  
+
   <!-- bootstrap progress js -->
   <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
   <!-- icheck -->
@@ -225,8 +223,7 @@
 
   <!-- pace -->
   <script src="js/pace/pace.min.js"></script>
-
-
+  
 </body>
 
 </html>

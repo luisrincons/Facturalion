@@ -1,0 +1,52 @@
+<?php
+$html_text = "";
+
+$html_text .= "<li class=\"header\">MÉNU PRINCIPAL</li>";
+$html_text .= "    <li class=\"treeview\">";
+$html_text .= "        <a href=\"#\">";
+$html_text .= "           <i class=\"fa fa-home\"></i> <span>Granja</span>";
+$html_text .= "           <i class=\"fa fa-angle-left pull-right\"></i>";
+$html_text .= "        </a>";
+$html_text .= "        <ul class=\"treeview-menu\">";
+$html_text .= "            <li><a href=\"#\"><i class=\"fa fa-plus-circle text-aqua\"></i> Nueva</a></li>";
+$html_text .= "            <li>";
+$html_text .= "            <a href=\"#\"><i class=\"fa fa-th-list\"></i> Listado <i class=\"fa fa-angle-left pull-right\"></i></a>";
+$html_text .= "               <ul class=\"treeview-menu\">";
+$html_text .= "                   <li><a href=\"../farm/rabbits_farms.html\"><i class=\"fa fa-circle-o\"></i> General</a></li>";
+$html_text .= "                   <li>";
+$html_text .= "                   <a href=\"#\"><i class=\"fa fa-circle-o\"></i> Sala <i class=\"fa fa-angle-left pull-right\"></i></a>";
+$html_text .= "                      <ul class=\"treeview-menu\">";
+$html_text .= "                        <li><a href=\"#\"><i class=\"fa fa-plus-circle text-aqua\"></i> Nueva</a></li>";
+$html_text .= "                        <li><a href=\"#\"><i class=\"fa fa-th-list\"></i> Listado</a></li>";
+$html_text .= "                      </ul>";
+$html_text .= "                   </li>";
+$html_text .= "                   <li>";
+$html_text .= "                   <a href=\"#\"><i class=\"fa fa-circle-o\"></i> Jaula <i class=\"fa fa-angle-left pull-right\"></i></a>";
+$html_text .= "                      <ul class=\"treeview-menu\">";
+$html_text .= "					        <li><a href=\"#\"><i class=\"fa fa-plus-circle text-aqua\"></i> Nueva</a></li>";
+$html_text .= "                         <li><a href=\"#\"><i class=\"fa fa-th-list\"></i> Listado</a></li>";
+$html_text .= "                      </ul>";
+$html_text .= "                    </li>";
+$html_text .= "                  </ul>";
+$html_text .= "                </li>";
+$html_text .= "              </ul>";    
+$html_text .= "            <li class=\"treeview\">";
+$html_text .= "              <a href=\"#\">";
+$html_text .= "                <i><img src=\"../images/svg/rabbit.svg\" width=\"14px\" height=\"14px\" /></i> <span>Conejos</span>";
+$html_text .= "                <i class=\"fa fa-angle-left pull-right\"></i>";
+$html_text .= "              </a>";
+$html_text .= "              <ul class=\"treeview-menu\">";
+$html_text .= "			    <li><a href=\"rabbits_icons.html\"><i class=\"fa fa-circle-o\"></i> General</a></li>";
+$html_text .= "                <li>";
+$html_text .= "                  <a href=\"rabbits_icons.html\"><i class=\"fa fa-circle-o\"></i> Catálogos <i class=\"fa fa-angle-left pull-right\"></i></a>";
+$html_text .= "                  <ul class=\"treeview-menu\">";
+$html_text .= "                    <li><a href=\"rabbits_catalog_colour.html\"><i class=\"fa fa-tint\"></i> Colores</a></li>";
+$html_text .= "                    <li><a href=\"rabbits_catalog_state.html\"><i class=\"fa fa-heartbeat\"></i> Estado</a></li>";
+$html_text .= "					   <li><a href=\"rabbits_catalog_level.html\"><i class=\"fa fa-th-large\"></i> Etapa</a></li>";
+$html_text .= "                  </ul>";
+$html_text .= "                </li>";
+$html_text .= "              </ul>";
+$html_text .= "            </li>";
+
+echo $html_text;
+?>

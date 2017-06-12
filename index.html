@@ -16,26 +16,28 @@
 </head>
 
 <body style="background:#F7F7F7;">
-
   <div class="">
+    <a class="hiddenanchor" id="toregister"></a>
     <a class="hiddenanchor" id="tologin"></a>
-
+	
     <div id="wrapper">
       <div id="login" class="animate form">
         <section class="login_content">
-          <form action="http://cdcom.dynalias.com/facturalion2/includes_php_fac/_validate.php" method="post" name="Access" id="Access">
+          <form name="Access" id="Access" action="http://cdcom.dynalias.com/facturalion2/includes_php_fac/_validate.php" method="post">
             <h1>Facturalion v2.0</h1>
-			
             <div>
-              <input type="text" class="form-control" placeholder="Nombre de usuario" required="" name="login" />
+              <input name="login" type="text" class="form-control" placeholder="Nombre de usuario" required="" />
             </div>
             <div>
-              <input type="password" class="form-control" placeholder="Contraseña" required="" name="password" />
+			  <input name="passw" type="password" class="form-control" placeholder="Contraseña" required="" />			  
             </div>
-            <button type="submit" class="btn btn-success">Accesar</button>
+            <div>
+              <button id="accesar" type="submit" class="btn btn-success">Accesar</button>
+            </div>
+            <div class="clearfix"></div>
+
             <div class="separator">
               <div class="clearfix"></div>
-              <br />
               <div>
                 <h2>Sistema para la facturación electrónica</h2>
 				<h2>Revisión v1.0</h2><br/> 
@@ -44,15 +46,17 @@
 				Capacitaci&oacute;n y Desarrollo Computarizados				
                 <p>© 2017 Derechos reservados.</p>
               </div>
-            </div>
+            </div>			
+			
           </form>
+          <!-- form -->
         </section>
-      </div>
+        <!-- content -->
+      </div>	
+	
 
-      </div>
     </div>
   </div>
-
 </body>
 
 </html>
