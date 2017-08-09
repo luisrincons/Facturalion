@@ -2,7 +2,6 @@
 
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap   = "http://phonegap.com/ns/1.0"
-	xmlns:android = "http://schemas.android.com/apk/res/android"
 	id          = "com.computadoraspc.facturalion"
 	version     = "2.0.3"
 	versionCode = "1.0.4">
@@ -18,34 +17,5 @@
 	</author>
 
     <preference name='phonegap-version' value='cli-6.5.0' />
-	<preference name="android-build-tool" value="gradle" />
-	<preference name="orientation" value="default" />
-	<preference name="fullscreen" value="false" />
-	<preference name="target-device" value="universal" />
-	<preference name="webviewbounce" value="true" />
-	<preference name="prerendered-icon" value="false" />
-	<preference name="stay-in-webview" value="true" />
-	<preference name="ios-statusbarstyle" value="default" />
-	<preference name="detect-data-types" value="true" />
-	<preference name="exit-on-suspend" value="true" />
-	<preference name="show-splash-screen-spinner" value="true" />
-	<preference name="auto-hide-splash-screen" value="true" />
-	<preference name="FadeSplashScreen " value="true" />
-	<preference name="EnableViewportScale" value="false" />
-	<preference name="MediaPlaybackRequiresUserAction" value="false" />
-	<preference name="AllowInlineMediaPlayback" value="true" />
-	<preference name="BackupWebStorage" value="none" />
-	<preference name="TopActivityIndicator" value="white" />
-	<preference name="KeyboardDisplayRequiresUserAction" value="true" />
-	<preference name="KeyboardShrinksView " value="true" />
-	<preference name="HideKeyboardFormAccessoryBar" value="true" />
-	<preference name="SuppressesIncrementalRendering" value="false" />
-	<preference name="windows-identity-name" value="" />
-	<preference name="android-installLocation" value="auto" />
-	<preference name="SplashScreenDelay" value="2000" />
-	<preference name="ErrorUrl" value="null" />
-	<preference name="BackgroundColor" value="0x000000" />
-	<preference name="DisallowOverscroll" value="true" />
-	<preference name="LoadingDialog" value="," />
-	<preference name="LoadUrlTimeoutValue" value="null" />	
+	
 </widget>
