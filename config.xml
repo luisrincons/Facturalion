@@ -22,8 +22,6 @@
 	<preference name="phonegap-version" value="cli-6.5.0" />
 	
 	<!-- Core plugins -->
-	<gap:plugin name="org.apache.cordova.file" source="npm" ></gap:plugin>
-	<gap:plugin name="org.apache.cordova.file-transfer" source="npm" ></gap:plugin>
-	<gap:plugin name="org.apache.cordova.splashscreen" source="npm" ></gap:plugin>
+
 	
 </widget>
