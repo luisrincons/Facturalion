@@ -22,7 +22,8 @@
     <preference name='pgb-builder-version' value='2' />
 	
 	<!-- Core plugins -->
-	<gap:plugin name="org.apache.cordova.file-transfer" source="npm" ></gap:plugin>
-	<gap:plugin name="org.apache.cordova.splashscreen" source="npm" ></gap:plugin>
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
 	
 </widget>
