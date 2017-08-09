@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
-<widget xmlns = "http://www.w3.org/ns/widgets"
-	xmlns:gap   = "http://phonegap.com/ns/1.0"
-	id          = "com.computadoraspc.facturalion"
-	version     = "2.0.3"
-	versionCode = "1.0.4">
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+		id          = "com.computadoraspc.facturalion"
+		version     = "2.0.3"
+		versionCode = "1.0.4">
 
 	<name>Facturalion</name>
 
@@ -16,6 +16,26 @@
 		Luis Alvaro Rincón Saldaña
 	</author>
 
-    <preference name='phonegap-version' value='cli-6.5.0' />
+    <preference name="pgb-builder-version" value="2" />
+    <preference name="phonegap-version" value="cli-6.5.0" />  
+
+    <!-- core plugins -->
+    <plugin name="cordova-plugin-battery-status" />
+    <plugin name="cordova-plugin-camera"/>
+    <plugin name="cordova-plugin-media-capture"/>
+    <plugin name="cordova-plugin-console"/>
+    <plugin name="cordova-plugin-contacts"/>
+    <plugin name="cordova-plugin-device"/>
+    <plugin name="cordova-plugin-device-motion"/>
+    <plugin name="cordova-plugin-device-orientation"/>
+    <plugin name="cordova-plugin-file"/>
+    <plugin name="cordova-plugin-file-transfer"/>
+    <plugin name="cordova-plugin-geolocation"/>
+    <plugin name="cordova-plugin-globalization"/>
+    <plugin name="cordova-plugin-inappbrowser"/>
+    <plugin name="cordova-plugin-media"/>
+    <plugin name="cordova-plugin-dialogs"/>
+    <plugin name="cordova-plugin-vibration"/>
+    <plugin name="cordova-plugin-statusbar" />
 	
 </widget>
