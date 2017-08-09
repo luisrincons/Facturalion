@@ -19,7 +19,7 @@
 	</author>
 	
 	<icon src="images/logo.png" />
-	
+	<preference name="phonegap-version" value="cli-6.5.0" />
 	<!-- Core plugins -->
 	<gap:plugin name="org.apache.cordova.dialogs" source="npm" ></gap:plugin>
 	<gap:plugin name="org.apache.cordova.file" source="npm" ></gap:plugin>
