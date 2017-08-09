@@ -3,7 +3,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap   = "http://phonegap.com/ns/1.0"
 	id          = "com.computadoraspc.facturalion"
-	version     = "2.0.2"
+	version     = "2.0.3"
 	versionCode = "1.0.3">
 
 	<preference name="phonegap-version" value="3.7.0" />
@@ -17,7 +17,9 @@
 	<author href="http://www.computadoraspc.com" email="sistemas.cdcomdemexico@gmail.com">
 		Luis Alvaro Rincón Saldaña
 	</author>
-	
+
+	<gap:plugin  name="org.apache.cordova.dialogs" source="npm" ></gap:plugin>
+	<gap:plugin name="org.apache.cordova.file-transfer" source="npm" ></gap:plugin>	
     
 	
 </widget>
