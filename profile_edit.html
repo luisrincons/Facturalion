@@ -6,40 +6,39 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Facturalion | Inicio</title>
-  
+
+  <title>Facturalion | Perfil</title>
+
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
-  
+
   <link href="css/custom.css" rel="stylesheet">
   <link href="css/icheck/flat/green.css" rel="stylesheet">
-  
 
-  <!-- Custom styling plus plugins -->
-  <link rel="stylesheet" type="text/css" href="css/maps/jquery-jvectormap-2.0.3.css" />
-  <link href="css/floatexamples.css" rel="stylesheet" type="text/css" />
-  
-  
   <script src="js/jquery.min.js"></script>
   <script src="includes_js_fac/spin.js"></script>
-  <script src="includes_js_fac/spin_config.js"></script>  
-  <script src="includes_js_fac/home.js"></script>
-  
+  <script src="includes_js_fac/spin_config.js"></script>    
+  <script src="includes_js_fac/profile.js"></script>
+
 </head>
 
+
 <body class="nav-md">
+
   <div class="container body">
+
+
     <div class="main_container">
-	
+
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
-		
+
           <div class="navbar nav_title" style="border: 0;">
-            <a href="" class="site_title"><img src="images_fac/icon/logo/cdcom_mexico.png" width="24" height="22" /> <span>Facturalion</span></a>
+            <a href="#" class="site_title"><img src="images_fac/icon/logo/cdcom_mexico.png" width="24" height="22" /> <span>Facturalion</span></a>
           </div>
           <div class="clearfix"></div>
-		  
+
           <div class="profile">
             <div class="profile_pic">
               <img src="images/img.jpg" alt="..." class="img-circle profile_img">
@@ -50,7 +49,7 @@
             </div>
           </div>
           <br />
-		  
+
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
@@ -69,7 +68,7 @@
 					</li>
               </ul>
             </div>
-
+		  
           </div>
           <!-- /sidebar menu -->
 
@@ -109,82 +108,94 @@
       </div>
       <!-- /top navigation -->
 
-
       <!-- page content -->
       <div class="right_col" role="main">
 
+        <div class="">
 
-		<div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="x_panel fixed_height_320">
-                <div class="x_title">
-                  <h2>Timbrado</h2>&nbsp;<b>Comprados <span id="timbrado_comprados"></span></b>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <div class="dashboard-widget-content">
-                    <ul class="quick-list">
-                      <li><a href="invoices_list_valid.html"><span id="timbrado_vigentes">0</span> Vigentes</a></li>
-                      <li><a href="invoices_list_canceled.html"><span id="timbrado_cancelados">0</span> Cancelados</a></li>
-                      <li><a href="invoices_list_stamped.html"><span id="timbrado_timbrados">0</span> Timbrados</a></li>
-                      <li>&nbsp;</li>
-                      <li><span id="timbrado_restantes">0</span> Restantes</li>
-                    </ul>
+		  
+          <div class="clearfix"></div>
 
-                    <div class="sidebar-widget">
-                      <h4>Timbres</h4>
-                      <canvas width="150" height="80" id="foo" class="" style="width: 160px; height: 100px;"></canvas>
-                      <div class="goal-wrapper">
-                        <span id="gauge-text" class="gauge-value pull-left">0</span>
-                        <span class="gauge-value pull-left">%</span>
-                        <span id="goal-text" class="goal-value pull-right">100%</span>
-                      </div>
-                    </div>
-										
-                  </div>
-                </div>
-				<div class="x_content">
-					<p style="font-size:16px">Fecha de compra: <span id="fecha_compra"></span></p>
+          <div class="row">
+		  
+                <div class="col-md-12 col-sm-12 col-xs-12">
+				
+				<!-- top tiles -->
+				<div class="row tile_count">
+				  <a class="btn btn-app" href="home.html">
+					<i class="fa fa-home"></i> Inicio
+				  </a>
+				  <a class="btn btn-app" href="profile.html">
+					<i class="fa fa-history"></i> Regresar
+				  </a>					
 				</div>
-              </div>
-            </div>
-		
-			<a href="invoices_year.html">
-			  <div class="animated flipInY col-md-6 col-sm-6 col-xs-12">
-				<div class="tile-stats">
-				  <div class="icon"><i class="fa fa-certificate"></i></div>
-				  <div class="count"></div>
-				  <p style="font-size:36px"><strong class="green"><span id="timbrados"></span></strong> Timbrados</p>
-				  <p style="font-size:22px"><strong class="green"><span id="vigentes"></span></strong> Vigentes</p>
-				  <p style="font-size:22px"><strong class="green"><span id="cancelados"></span></strong> Cancelados</p>
-				</div>
-			  </div>
-			</a>		
+				<!-- /top tiles -->					
+				
+				
+                    <div class="x_panel">
+			  
+						<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<img id="profile_logo" src="images/facturalion.png" alt="Logotipo" >
+						</div>					
+			  			
+				
+						<div class="x_content">
+						  <p class="lead">Información fiscal del emisor</p>
+						  <table class="table table-striped">
+							<tbody>
+							  <tr>
+								<td><button id="tipo_persona" class="btn btn btn-info btn-sm">Persona</button></td></td>
+								<td><span id="data_contribuyente"></span></td>
+							  </tr>
+							  <tr>
+								<td><button id="num_certificado" class="btn btn btn-info btn-sm">Certificado</button></td>
+								<td><span id="data_certificado"></span></td>
+							  </tr>
+							  <tr>
+								<td><button id="tipo_regimen" class="btn btn btn-info btn-sm">Tipo régimen</button></td>
+								<td><span id="data_regimen"></span></td>
+							  </tr>
+							  <tr>
+								<td><button id="rfc" class="btn btn btn-info btn-sm">RFC</button></td>
+								<td><span id="data_rfc"></span></td>
+							  </tr>												  
+							  <tr>
+								<td><button id="curp" class="btn btn btn-info btn-sm">CURP</button></td>
+								<td><span id="data_curp"></span></td>
+							  </tr>												  
+							  <tr>
+								<td><button id="nombre" class="btn btn btn-info btn-sm">Nombre</button></td>
+								<td><span id="data_nombre"></span></td>
+							  </tr>												  
+							  <tr>
+								<td><button id="registro_patronal" class="btn btn btn-info btn-sm">Reg.Patronal</button></td>
+								<td><span id="data_regpatronal"></span></td>
+							  </tr>												  
+							  <tr>
+								<td><button id="correo" class="btn btn btn-info btn-sm">Correo</button></td>
+								<td><span id="data_correo"></span></td>
+							  </tr>
+							  <tr>
+								<td><button id="domicilio" class="btn btn btn-info btn-sm">Domicilio</button></td>
+								<td><span id="domicilio_fiscal"></span></td>
+							  </tr>
+							</tbody>
+						  </table>
 
-			<a href="customers.html">	
-				  <div class="animated flipInY col-md-6 col-sm-6 col-xs-12">
-					<div class="tile-stats">
-					  <div class="icon"><i class="fa fa-users"></i></div>
-					  <p style="font-size:32px"><strong class="green"><span id="clientes"></span></strong> Clientes</p>
-					  <p style="font-size:16px"><strong class="green">&nbsp;</strong></p>		  
+						</div>
+
 					</div>
-				  </div>		  
-			</a>
-
-		<a href="products.html">
-			  <div class="animated flipInY col-md-6 col-sm-6 col-xs-12">
-				<div class="tile-stats">
-				  <div class="icon"><i class="fa fa-truck"></i></div>
-				  <p style="font-size:32px"><strong class="green"><span id="productos"></span></strong> Artículos</p>
-				  <p style="font-size:16px"><strong class="green">&nbsp;</strong></p>			  
-				</div>
-			  </div>
-		</a>
+				  
+                </div>
+				
+				
+            </div>
+          </div>
         </div>
-
- 
       </div>
+      <!-- /page content -->
 
+      <!-- footer content -->
       <footer>
         <div class="pull-right">
           Facturalion
@@ -195,17 +206,30 @@
     </div>
   </div>
 
+  <div id="custom_notifications" class="custom-notifications dsp_none">
+    <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+    </ul>
+    <div class="clearfix"></div>
+    <div id="notif-group" class="tabbed_notifications"></div>
+  </div>
+
   <script src="js/bootstrap.min.js"></script>
-   <!-- bootstrap progress js -->
+  
+  <!-- bootstrap progress js -->
   <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
   <!-- icheck -->
   <script src="js/icheck/icheck.min.js"></script>
-  <!-- gauge js -->
-  <script type="text/javascript" src="js/gauge/gauge.min.js"></script>
+
   <script src="js/custom.js"></script>
+
+  <!-- moris js -->
+  <script src="js/moris/raphael-min.js"></script>
+  <script src="js/moris/morris.min.js"></script>
+
   <!-- pace -->
   <script src="js/pace/pace.min.js"></script>
-  
+
+
 </body>
 
 </html>

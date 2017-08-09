@@ -1,4 +1,4 @@
-//invoices_list_customer.js
+//invoices_consult_customer.js
 $(document).ready(function() {
 	
 	$.ajax({
@@ -11,9 +11,6 @@ $(document).ready(function() {
 		if(data.authorized == "Yes"){
 		  $('#login_user').text(data.login_user);
 	      $('#login_user_right').html(data.login_user);	
-		  $('#month_selected_value').html(data.item_month_name_value);
-		  $('#year_selected_value').html(data.item_year_selected_value);
-		  $('#customer_selected_value').html(data.item_name_customer_selected_value);
 		  $('#number_invoice_selected_value').html(data.item_number_invoice_selected_value);
 		  var id = data.item_invoice_selected_value;
 		  getdata_invoice_selected(id);

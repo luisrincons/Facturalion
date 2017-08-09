@@ -12,21 +12,26 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
-
   <link href="css/custom.css" rel="stylesheet">
   <link href="css/icheck/flat/green.css" rel="stylesheet">
-
+  <link href="css/lock_screen.css" rel="stylesheet">
+ 
   <script src="js/jquery.min.js"></script>
+  <script src="js/notify/pnotify.core.js"></script> 
   <script src="includes_js_fac/spin.js"></script>
-  <script src="includes_js_fac/spin_config.js"></script>    
-  <script src="includes_js_fac/profile.js"></script>
-
+  <script src="includes_js_fac/spin_config.js"></script>
+  <script src="includes_js_fac/profile_pattern_create.js"></script>
+  <script src="js/aes.js"></script>
+  <script src="js/aes-ctr.js"></script>  
+  
+ 
 </head>
 
 
 <body class="nav-md">
 
   <div class="container body">
+
 
 
     <div class="main_container">
@@ -111,94 +116,33 @@
       <!-- page content -->
       <div class="right_col" role="main">
 
-        <div class="">
-
-		  
-          <div class="clearfix"></div>
-
           <div class="row">
 		  
                 <div class="col-md-12 col-sm-12 col-xs-12">
 				
-				<!-- top tiles -->
-				<div class="row tile_count">
-				  <a class="btn btn-app" href="home.html">
-					<i class="fa fa-home"></i> Inicio
-				  </a>
-				  <a class="btn btn-app" href="profile_edit.html">
-					<i class="fa fa-edit"></i> Editar
-				  </a>
-				  <a class="btn btn-app" href="profile_passw_edit.html">
-					<i class="fa fa-key"></i> Contraseña
-				  </a>						
-				</div>
-				<!-- /top tiles -->					
-				
-				
-                    <div class="x_panel">
-			  
-						<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-							<img id="profile_logo" src="images/facturalion.png" alt="Logotipo" >
-						</div>					
-			  			
-				
-						<div class="x_content">
-						  <p class="lead">Información fiscal del emisor</p>
-						  <table class="table table-striped">
-							<tbody>
-							  <tr>
-								<td>Persona</td>
-								<td><span id="data_contribuyente"></span></td>
-							  </tr>
-							  <tr>
-								<td>Núm.Certificado</td>
-								<td><span id="data_certificado"></span></td>
-							  </tr>
-							  <tr>
-								<td>Tipo de Régimen</td>
-								<td><span id="data_regimen"></span></td>
-							  </tr>
-							  <tr>
-								<td>RFC</td>
-								<td><span id="data_rfc"></span></td>
-							  </tr>												  
-							  <tr>
-								<td>CURP</td>
-								<td><span id="data_curp"></span></td>
-							  </tr>												  
-							  <tr>
-								<td>Nombre</td>
-								<td><span id="data_nombre"></span></td>
-							  </tr>												  
-							  <tr>
-								<td>Registro Patronal</td>
-								<td><span id="data_regpatronal"></span></td>
-							  </tr>												  
-							  <tr>
-								<td>Correo</td>
-								<td><span id="data_correo"></span></td>
-							  </tr>
-							  <tr>
-								<td>Domicilio</td>
-								<td><span id="domicilio_fiscal"></span></td>
-							  </tr>
-							</tbody>
-						  </table>
-
-						</div>
-
+					<!-- top tiles -->
+					<div class="row tile_count">
+					  <a class="btn btn-app" href="home.html">
+						<i class="fa fa-home"></i> Inicio
+					  </a>
+					  <a class="btn btn-app" href="profile_passw_edit.html">
+						<i class="fa fa-history"></i> Regresar
+					  </a>					
 					</div>
-				  
-                </div>
+					<!-- /top tiles -->					
 				
-				
-            </div>
+				</div>
+		  </div>
+		  
+		  <div class="row">
+				<div class="mhn-lock-wrap">
+				<div class="mhn-lock-title" data-title="Crea tú patrón de acceso"></div>		  
+				<div class="mhn-lock"></div>
+				</div>
           </div>
-        </div>
+		  
       </div>
-      <!-- /page content -->
 
-      <!-- footer content -->
       <footer>
         <div class="pull-right">
           Facturalion
@@ -209,6 +153,75 @@
     </div>
   </div>
 
+    <div class="modal modal-success fade" id="message-success" tabindex="-1" role="dialog" aria-labelledby="myModalSuccessLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalSucessLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <span id="contenidoSuccess"></span>
+                </div>
+                <div class="modal-footer">
+                    <button id="cerrar-success" type="button" class="btn btn-outline" >Cerrar</button>				
+                </div>
+            </div>
+        </div>	
+	</div>
+
+	<div class="modal modal-info fade" id="message-info" tabindex="-1" role="dialog" aria-labelledby="myModalInfoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalInfoLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <span id="contenidoInfo"></span>
+                </div>
+                <div class="modal-footer">
+                    <button id="cerrar-info" type="button" class="btn btn-outline" >Cerrar</button>				
+                </div>
+            </div>
+        </div>	
+	</div>
+	
+    <div class="modal modal-warning fade" id="message-warning" tabindex="-1" role="dialog" aria-labelledby="myModalWarningLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalWarningLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <span id="contenidoWarning"></span>
+                </div>
+                <div class="modal-footer">
+                    <button id="cerrar-warning" type="button" class="btn btn-outline pull-left" >Cancelar</button>
+                    <button id="aceptar-warning" type="button" class="btn btn-outline">Aceptar</button>                 					
+                </div>
+            </div>
+        </div>	
+	</div>
+	
+    <div class="modal modal-danger fade" id="message-error" tabindex="-1" role="dialog" aria-labelledby="myModalErrorLabel" aria-hidden="true">	  
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalErrorLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <span id="contenidoError"></span>
+                </div>
+                <div class="modal-footer">
+                    <button id="cerrar-error" type="button" class="btn btn-outline" >Cerrar</button>
+                </div>
+            </div>
+        </div>
+	</div>  
+  
   <div id="custom_notifications" class="custom-notifications dsp_none">
     <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
     </ul>

@@ -1,0 +1,21 @@
+.mhn-lock-wrap {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.mhn-lock-wrap .mhn-lock-title {
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .5)
+}
+.mhn-lock-wrap .mhn-lock-success {
+    color: transparent;
+    text-shadow: none
+}
+.mhn-lock-wrap .mhn-lock-failure {
+    color: #f34235
+}
+.mhn-lock {
+    margin: auto;
+    background: 0 0
+}

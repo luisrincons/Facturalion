@@ -15,16 +15,10 @@
   <link href="css/custom.css" rel="stylesheet">
   <link href="css/icheck/flat/green.css" rel="stylesheet">
   
-
-  <!-- Custom styling plus plugins -->
-  <link rel="stylesheet" type="text/css" href="css/maps/jquery-jvectormap-2.0.3.css" />
-  <link href="css/floatexamples.css" rel="stylesheet" type="text/css" />
-  
-  
   <script src="js/jquery.min.js"></script>
   <script src="includes_js_fac/spin.js"></script>
   <script src="includes_js_fac/spin_config.js"></script>  
-  <script src="includes_js_fac/home.js"></script>
+  <script src="includes_js_fac/invoices_consult_invoice.js"></script>
   
 </head>
 
@@ -113,78 +107,93 @@
       <!-- page content -->
       <div class="right_col" role="main">
 
+	  
+        <!-- top tiles -->
+        <div class="row tile_count">
+	      <h1>&nbsp;<span id="number_invoice_selected_value"></span></h1>
 
-		<div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="x_panel fixed_height_320">
-                <div class="x_title">
-                  <h2>Timbrado</h2>&nbsp;<b>Comprados <span id="timbrado_comprados"></span></b>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <div class="dashboard-widget-content">
-                    <ul class="quick-list">
-                      <li><a href="invoices_list_valid.html"><span id="timbrado_vigentes">0</span> Vigentes</a></li>
-                      <li><a href="invoices_list_canceled.html"><span id="timbrado_cancelados">0</span> Cancelados</a></li>
-                      <li><a href="invoices_list_stamped.html"><span id="timbrado_timbrados">0</span> Timbrados</a></li>
-                      <li>&nbsp;</li>
-                      <li><span id="timbrado_restantes">0</span> Restantes</li>
-                    </ul>
+		  <a class="btn btn-app" href="#">
+			<i class="fa fa-paper-plane"></i> Enviar
+		  </a>
+		  <a class="btn btn-app" href="#">
+			<i class="fa fa-times-circle"></i> Cancelar
+		  </a>		  
+		  <a class="btn btn-app" href="invoices_list_canceled.html">
+			<i class="fa fa-history"></i> Regresar
+		  </a>
+		  
+		  <div  class="col-md-9 col-sm-9 col-xs-12">
+			  <ul class="messages">
+				<span id="content_invoice">
+				</span>				
+			  </ul>
+		  </div>
+		  
+        </div>
+        <!-- /top tiles -->
 
-                    <div class="sidebar-widget">
-                      <h4>Timbres</h4>
-                      <canvas width="150" height="80" id="foo" class="" style="width: 160px; height: 100px;"></canvas>
-                      <div class="goal-wrapper">
-                        <span id="gauge-text" class="gauge-value pull-left">0</span>
-                        <span class="gauge-value pull-left">%</span>
-                        <span id="goal-text" class="goal-value pull-right">100%</span>
-                      </div>
-                    </div>
-										
-                  </div>
-                </div>
-				<div class="x_content">
-					<p style="font-size:16px">Fecha de compra: <span id="fecha_compra"></span></p>
-				</div>
-              </div>
-            </div>
-		
-			<a href="invoices_year.html">
-			  <div class="animated flipInY col-md-6 col-sm-6 col-xs-12">
-				<div class="tile-stats">
-				  <div class="icon"><i class="fa fa-certificate"></i></div>
-				  <div class="count"></div>
-				  <p style="font-size:36px"><strong class="green"><span id="timbrados"></span></strong> Timbrados</p>
-				  <p style="font-size:22px"><strong class="green"><span id="vigentes"></span></strong> Vigentes</p>
-				  <p style="font-size:22px"><strong class="green"><span id="cancelados"></span></strong> Cancelados</p>
-				</div>
-			  </div>
-			</a>		
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
 
-			<a href="customers.html">	
-				  <div class="animated flipInY col-md-6 col-sm-6 col-xs-12">
-					<div class="tile-stats">
-					  <div class="icon"><i class="fa fa-users"></i></div>
-					  <p style="font-size:32px"><strong class="green"><span id="clientes"></span></strong> Clientes</p>
-					  <p style="font-size:16px"><strong class="green">&nbsp;</strong></p>		  
-					</div>
-				  </div>		  
-			</a>
+          </div>
 
-		<a href="products.html">
-			  <div class="animated flipInY col-md-6 col-sm-6 col-xs-12">
-				<div class="tile-stats">
-				  <div class="icon"><i class="fa fa-truck"></i></div>
-				  <p style="font-size:32px"><strong class="green"><span id="productos"></span></strong> Artículos</p>
-				  <p style="font-size:16px"><strong class="green">&nbsp;</strong></p>			  
-				</div>
-			  </div>
-		</a>
+        </div>
+        <br />
+
+        <div class="row">
+
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+
+          </div>
+
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+
+          </div>
+
         </div>
 
- 
-      </div>
 
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+
+          </div>
+
+
+          <div class="col-md-8 col-sm-8 col-xs-12">
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+
+              </div>
+
+            </div>
+            <div class="row">
+
+              <!-- Start to do list -->
+              <div class="col-md-6 col-sm-6 col-xs-12">
+
+              </div>
+              <!-- End to do list -->
+              
+              <!-- start of weather widget -->
+              <div class="col-md-6 col-sm-6 col-xs-12">
+
+              </div>
+              <!-- end of weather widget -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /page content -->
+
+      <!-- footer content -->
       <footer>
         <div class="pull-right">
           Facturalion
@@ -195,14 +204,26 @@
     </div>
   </div>
 
+  <div id="custom_notifications" class="custom-notifications dsp_none">
+    <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+    </ul>
+    <div class="clearfix"></div>
+    <div id="notif-group" class="tabbed_notifications"></div>
+  </div>
+
   <script src="js/bootstrap.min.js"></script>
-   <!-- bootstrap progress js -->
+
+  <!-- bootstrap progress js -->
   <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
   <!-- icheck -->
   <script src="js/icheck/icheck.min.js"></script>
-  <!-- gauge js -->
-  <script type="text/javascript" src="js/gauge/gauge.min.js"></script>
+
   <script src="js/custom.js"></script>
+
+  <!-- moris js -->
+  <script src="js/moris/raphael-min.js"></script>
+  <script src="js/moris/morris.min.js"></script>
+
   <!-- pace -->
   <script src="js/pace/pace.min.js"></script>
   

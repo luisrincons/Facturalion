@@ -12,52 +12,49 @@
   <link href="css/animate.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
   <link href="css/icheck/flat/green.css" rel="stylesheet">
-  
   <script src="js/jquery.min.js"></script>
-  <script src="includes_js_fac/spin.js"></script>
-  <script src="includes_js_fac/spin_config.js"></script>
-  <script src="includes_js_fac/granted_access.js"></script>
 </head>
 
 <body style="background:#F7F7F7;">
-
   <div class="">
-    <a class="hiddenanchor" id="tologin"></a>
-
+	
     <div id="wrapper">
       <div id="login" class="animate form">
         <section class="login_content">
-          <form>
+          <form name="Access" id="Access" action="http://cdcom.dynalias.com/facturalion2/includes_php_fac/_validate.php" method="post">
             <h1>Facturalion v2.0</h1>
-            <span id="nombre_usuario" class="h3"><img id="wait_data" src="images_fac/gif/reload.gif" style="display:none;"></span>
-			</br></br>
-			<img id="wait_icon" src="" style="display:none;">
             <div>
-			  <a class="btn btn-default submit" href="http://cdcom.dynalias.com/facturalion2/includes_php_fac/_logout.php">REGRESAR</a>
-              <a class="btn btn-default submit" href="home.html">CONTINUAR</a>
+              <input name="login" type="text" class="form-control" placeholder="Nombre de usuario" required="" />
+            </div>
+            <div>
+			  <input name="passw" type="password" class="form-control" placeholder="Contraseña" required="" />			  
+            </div>
+            <div>
+              <button id="accesar" type="submit" class="btn btn-success">Accesar</button>
             </div>
             <div class="clearfix"></div>
+
             <div class="separator">
               <div class="clearfix"></div>
-              <br />
               <div>
-                <p style="font-size:27px">Bienvenido!</p><h2>Sistema para la Facturación Electrónica</h2>
+                <h2>Sistema para la facturación electrónica</h2>
+				<h2>Revisión v1.0</h2><br/> 
 				<img src="images_fac/icon/logo/cdcom_mexico.png" width="24" height="22" />
 				CD-COM de M&eacute;xico <br/> 
 				Capacitaci&oacute;n y Desarrollo Computarizados				
                 <p>© 2017 Derechos reservados.</p>
               </div>
-            </div>
+            </div>			
+			
           </form>
           <!-- form -->
         </section>
         <!-- content -->
-      </div>
+      </div>	
+	
 
-      </div>
     </div>
   </div>
-
 </body>
 
 </html>

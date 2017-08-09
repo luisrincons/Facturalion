@@ -6,23 +6,52 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>Facturalion | Acceso</title>
+  
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
+  <link href="css/icheck/flat/green.css" rel="stylesheet">
+  <link href="css/lock_screen.css" rel="stylesheet">
+  
   <script src="js/jquery.min.js"></script>
   <script src="includes_js_fac/spin.js"></script>
   <script src="includes_js_fac/spin_config.js"></script>  
-  <script src="includes_js_fac/index.js"></script>
+  <script src="includes_js_fac/index_mobile.js"></script>
   <script src="js/aes.js"></script>
   <script src="js/aes-ctr.js"></script>    
+  
 </head>
 
 <body style="background:#F7F7F7;">
+  <div class="">
+    <a class="hiddenanchor" id="toregister"></a>
+    <a class="hiddenanchor" id="tologin"></a>
+	
     <div id="wrapper">
+      <div id="login" class="animate form">
         <section class="login_content">
 			<form>
-			  <h1>Facturalion v2.0</h1>
+
+            <h1>Facturalion v2.0</h1>
+
+		    <div class="row">
+				<div class="mhn-lock-wrap">
+				<div class="mhn-lock-title" data-title=""></div>		  
+				<div class="mhn-lock"></div>
+				</div>
+            </div>			
+			
+            <div>
+			  <a class="btn btn-default submit" href="index_desktop.html">Modo Login</a>
+            </div>
+			
+            <div class="clearfix"></div>
+
+            <div class="separator">
+              <div class="clearfix"></div>
               <div>
                 <h2>Sistema para la facturación electrónica</h2>
 				<h2>Revisión v1.0</h2><br/> 
@@ -31,9 +60,14 @@
 				Capacitaci&oacute;n y Desarrollo Computarizados				
                 <p>© 2017 Derechos reservados.</p>
               </div>
-			</form>			  
-        </section>		
+            </div>	
+			</form>
+			
+        </section>
+
+      </div>	
     </div>
+  </div>
 </body>
 
 </html>
