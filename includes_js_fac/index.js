@@ -16,7 +16,10 @@ $(document).ready(function() {
 		  return;	
 		}
 	}).fail(function(xhr, textStatus, errorThrown) {
-	  alert(errorThrown);
+	  //alert(errorThrown);
+	  $.spin('false');
+	  window.location.href = "index_desktop.html";
+	  return;	  
 	}).always(function() {
 	   $.spin('false');
 	});	 
