@@ -1,9 +1,11 @@
 //index_mobile.js
 $(document).ready(function() {
 	
-      var pattern_access = localStorage.getItem('patter_access') || '<empty>';
+      var pattern_access = localStorage.getItem('pattern_access') || '<empty>';
 	  if(pattern_access != "<empty>"){
          alert(pattern_access);
+	  } else {
+		 pattern_access = "789"; 
 	  }
 	
 });
@@ -22,9 +24,9 @@ mhnUI = {
         mhnUI.page.hide(), pattern = new PatternLock(".mhn-lock", {
             radius:20, margin: 20
         }), 
-		    $(".mhn-lock-title").html($(".mhn-lock-title").data("title")), pattern.checkForPattern("7415369", function() {
+		    $(".mhn-lock-title").html($(".mhn-lock-title").data("title")), pattern.checkForPattern(pattern_access, function() {
 		    
- 			    alert("ok!");
+ 			    alert(pattern_access);
 			
 			}, function() {
 				$(".mhn-lock-title").html('<span class="mhn-lock-failure"></span>'), $(".patt-holder").removeClass("patt-success"), setTimeout(function() {
