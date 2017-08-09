@@ -9,10 +9,10 @@ $(document).ready(function() {
 	}
 	}).done(function(data) {
 		if(data.browser == "mobile"){
-		  window.location.href = "http://cdcom.dynalias.com/facturalion2/index_mobile.html";
+		  window.location.href = "index_mobile.html";
 		  return;
 		} else {
-		  window.location.href = "http://cdcom.dynalias.com/facturalion2/index_desktop.html";
+		  window.location.href = "index_desktop.html";
 		  return;	
 		}
 	}).fail(function(xhr, textStatus, errorThrown) {
