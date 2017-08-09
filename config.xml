@@ -38,4 +38,6 @@
     <plugin name="cordova-plugin-vibration"/>
     <plugin name="cordova-plugin-statusbar" />
 	
+	<access origin="*" />
+	
 </widget>
