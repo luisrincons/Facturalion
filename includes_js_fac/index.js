@@ -1,6 +1,8 @@
 //index.js
 $(document).ready(function() {
 	localStorage.setItem("pattern_access", "123");
+	var pattern_access = localStorage.getItem('pattern_access') || '<empty>';
+	alert(pattern_access);
 	$.ajax({
 	url: 'http://cdcom.dynalias.com/facturalion2/includes_php_fac/_detect_browser.php',
 	dataType: 'json',
