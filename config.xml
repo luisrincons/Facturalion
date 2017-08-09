@@ -18,8 +18,8 @@
 		Luis Alvaro Rincón Saldaña
 	</author>
 
-	<gap:plugin  name="org.apache.cordova.dialogs" source="npm" ></gap:plugin>
-	<gap:plugin name="org.apache.cordova.file-transfer" source="npm" ></gap:plugin>	
+	<plugin name="org.apache.cordova.dialogs" spec="0.3.0" source="pgb" />
+	<plugin name="org.apache.cordova.file-transfer" spec="0.5.0" source="pgb" />
     
 	
 </widget>
