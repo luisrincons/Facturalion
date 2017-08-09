@@ -19,7 +19,8 @@
 	</author>
 	
 	<icon src="images/logo.png" />
-	<preference name="phonegap-version" value="cli-6.5.0" />
+	<preference name='phonegap-version' value='cli-6.5.0' />
+    <preference name='pgb-builder-version' value='2' />
 	
 	<!-- Core plugins -->
 	<gap:plugin name="org.apache.cordova.file-transfer" source="npm" ></gap:plugin>
