@@ -6,7 +6,7 @@
 	version     = "2.0.3"
 	versionCode = "1.0.3">
 
-	<preference name="phonegap-version" value="3.7.0" />
+	<preference name="phonegap-version" value="cli-5.1.1" />
 
 	<name>Facturalion</name>
 
@@ -18,8 +18,9 @@
 		Luis Alvaro Rincón Saldaña
 	</author>
 
-	<plugin name="org.apache.cordova.dialogs" spec="0.3.0" source="pgb" />
-	<plugin name="org.apache.cordova.file-transfer" spec="0.5.0" source="pgb" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
     
 	
 </widget>
