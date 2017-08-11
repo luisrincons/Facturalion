@@ -24,8 +24,7 @@ $(document).ready(function() {
 		var code_error = "";
 		var cont_error = "";
         if (jqXHR.status === 0) {
-           code_error = 'Not connect';
-		   cont_error = 'Verify Network';
+		   window.location.href = "page_000.html";
         } else if (jqXHR.status == 404) {
            code_error = 'Code[404]';
 		   cont_error = 'Requested page not found';
