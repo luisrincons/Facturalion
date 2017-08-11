@@ -58,8 +58,11 @@ if(!$result) {
 $close = mysqli_close($link) 
 or die("Ha sucedido un error inexperado en la desconexion de la base de datos");
 
+$type_browser = $_SESSION['session_type_browser'];
+
 $data_cache = array(
-'result'=>$result
+'result'=>$result,
+'type_browser'=>$type_browser
 );
 header('Content-type: application/json');
 echo json_encode($data_cache);

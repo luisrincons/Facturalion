@@ -13,11 +13,10 @@ $(function(){
 	      $("#login_user_right").html(data.login_user);
 		  $("#login_user_avatar").html(data.name_user);			
 		  mhnUI.setup(data.idgral_user);
-		  return;
 		} else {
 		  window.location.href = "http://cdcom.dynalias.com/facturalion2/includes_php_fac/_logout.php";
-		  return;	
 		}
+		return;		
 	}).fail(function(xhr, textStatus, errorThrown) {
 	  alert(errorThrown);
 	}).always(function() {
@@ -32,38 +31,42 @@ mhnUI = {
     setup: function(dataid) {
         this.lock(dataid), $(".mhn-lock-title").html($(".mhn-lock-title").data("title"))
     },
-    lock: function(data) {
+    lock: function(dataid) {
        var lock = new PatternLock(".mhn-lock", {
 			radius:20, margin: 20,
 			onDraw: function(pattern){
-			   var crypto_pattern = lock.getPattern();
-               var password = data;
-               var encrtext = AesCtr.encrypt(crypto_pattern, password, 256);
+			   var login_pattern  = lock.getPattern();
+               var data_pattern   = dataid;
+               var crypto_pattern = AesCtr.encrypt(data_pattern, login_pattern, 256);
 
 			   $.ajax({
 				 type: 'POST',
 				 url: 'http://cdcom.dynalias.com/facturalion2/includes_php_fac/savedata_customer.php',
-				 data: {'tbl':'pattern', 'data_01':encrtext},
+				 data: {'tbl':'pattern', 'data_01':login_pattern},
 				 dataType: 'json',
 				 beforeSend: function(xhr) {
 				   $.spin('true');      
 				 }	
 				 }).done(function(data) {
 				  if(data.result == "Ok!"){
-					  
-						localStorage.setItem("pattern_access", encrtext);
-					  
+					    localStorage.clear();
+						//if(data.type_browser == "mobile"){
+  						  localStorage.setItem("pattern_data", crypto_pattern);
+						  localStorage.setItem("pattern_draw", login_pattern);
+					    //}				
 						new PNotify({
 							title: 'Patrón de acceso',
 							text: 'El patrón ha sido realizado con éxito.',
-							type: 'success'
+							type: 'success',
+							delay: 500
 						});
 						$(".mhn-lock-title").html('El patrón ha sido almacenado');
 				  } else {
 					   new PNotify({
 						  title: 'Patrón de acceso',
 						  text: 'El patrón no pudo ser almacenado.',
-						  type: 'error'
+						  type: 'error',
+						  delay: 500
 					   });	
 				  }
 				  return;

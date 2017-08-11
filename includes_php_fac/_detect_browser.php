@@ -1,5 +1,6 @@
 <?php
-  
+session_name('area_customer');
+session_start();
 $tablet_browser = 0;
 $mobile_browser = 0;
 $body_class = 'desktop';
@@ -55,9 +56,7 @@ else {
 // Si es ordenador de escritorio has lo que necesites
    $detect_browser = 'desktop';
 }
-
-
-
+$_SESSION['session_type_browser'] = $detect_browser;
 $data_cache = array(
 'browser'=>$detect_browser
 );

@@ -6,13 +6,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>Facturalion | Acceso</title>
+  
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
   <link href="css/icheck/flat/green.css" rel="stylesheet">
+  
   <script src="js/jquery.min.js"></script>
+  <script src="js/notify/pnotify.core.js"></script>
+  <script src="includes_js_fac/spin.js"></script>
+  <script src="includes_js_fac/spin_config.js"></script>    
+  <script src="includes_js_fac/index_desktop.js"></script>
 </head>
 
 <body style="background:#F7F7F7;">
@@ -21,16 +28,16 @@
     <div id="wrapper">
       <div id="login" class="animate form">
         <section class="login_content">
-          <form name="Access" id="Access" action="http://cdcom.dynalias.com/facturalion2/includes_php_fac/_validate.php" method="post">
+          <form>
             <h1>Facturalion v2.0</h1>
             <div>
-              <input name="login" type="text" class="form-control" placeholder="Nombre de usuario" required="" />
+              <input id="field_login" type="text" class="form-control" placeholder="Nombre de usuario" required="" />
             </div>
             <div>
-			  <input name="passw" type="password" class="form-control" placeholder="Contraseña" required="" />			  
+			  <input id="field_passw" type="password" class="form-control" placeholder="Contraseña" required="" />			  
             </div>
             <div>
-              <button id="accesar" type="submit" class="btn btn-success">Accesar</button>
+			  <a id="accesar" class="btn btn-default submit" href="#">Accesar</a>
             </div>
             <div class="clearfix"></div>
 
@@ -44,15 +51,11 @@
 				Capacitaci&oacute;n y Desarrollo Computarizados				
                 <p>© 2017 Derechos reservados.</p>
               </div>
-            </div>			
-			
+            </div>
           </form>
-          <!-- form -->
         </section>
-        <!-- content -->
       </div>	
 	
-
     </div>
   </div>
 </body>
