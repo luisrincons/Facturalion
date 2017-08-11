@@ -20,6 +20,7 @@
     <preference name="phonegap-version" value="cli-6.5.0" />  
 
     <!-- core plugins -->
+	<plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-battery-status" />
     <plugin name="cordova-plugin-camera"/>
     <plugin name="cordova-plugin-media-capture"/>
