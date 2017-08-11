@@ -22,25 +22,33 @@ $(document).ready(function() {
 		return;	
 	}).fail(function(jqXHR, textStatus, errorThrown) {
 		var code_error = "";
+		var cont_error = "";
         if (jqXHR.status === 0) {
-           code_error = 'Not connect: Verify Network.';
+           code_error = 'Not connect';
+		   cont_error = 'Verify Network';
         } else if (jqXHR.status == 404) {
-           code_error = 'Requested page not found [404]';
+           code_error = '[404]';
+		   cont_error = 'Requested page not found';
         } else if (jqXHR.status == 500) {
-           code_error = 'Internal Server Error [500].';
+           code_error = '[500].';
+		   cont_error = 'Internal Server Error';
         } else if (textStatus === 'parsererror') {
-           code_error = 'Requested JSON parse failed.';
+           code_error = 'ParseError';
+		   cont_error = 'Requested JSON parse failed.';
         } else if (textStatus === 'timeout') {
-           code_error = 'Time out error.';
+           code_error = 'Error';
+		   cont_error = 'Time out';
         } else if (textStatus === 'abort') {
-           code_error = 'Ajax request aborted.';
+           code_error = 'Error';
+		   cont_error = 'Abort';
         } else {
-           code_error = 'Uncaught Error: ' + jqXHR.responseText;
+           code_error = 'Uncaught Error';
+		   cont_error = jqXHR.responseText;
         }
 		$.spin('false');
 		new PNotify({
 		    title: code_error,
-			text: errorThrown,
+			text: cont_error,
 			type: 'error',
 			delay: 2500
 		});		  
