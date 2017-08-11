@@ -38,7 +38,7 @@
     <plugin name="cordova-plugin-vibration"/>
     <plugin name="cordova-plugin-statusbar" />
 	
-  <allow-navigation href="http://*/*"/>
-  <access origin="*"/>
+	<access origin="http://*" />
+    <access origin="https://*" />
 	
 </widget>
