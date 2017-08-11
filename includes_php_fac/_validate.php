@@ -82,7 +82,7 @@ if ($goPage == ""){
 				$_SESSION['name_user']   = trim($field["nombre"]." ".$field["paterno"]." ".$field["materno"]);
 				$_SESSION['category_user'] = $field["categoria"];
 				$_SESSION['prefix_table_user'] = $field["prefijo_tabla"];
-				$_SESSION['path_icon_user'] = "html2pdf/examples/res/C".$_SESSION['prefix_table_user']."_Expediente/logo_cliente.png";
+				$_SESSION['path_icon_user'] = "http://cdcom.dynalias.com/facturalion/html2pdf/examples/res/C".$_SESSION['prefix_table_user']."_Expediente/logo_cliente.png";
 
 				$_SESSION['tipo_persona'] = $field["tipo_persona"];
 				if($_SESSION['tipo_persona'] == 'Moral'){

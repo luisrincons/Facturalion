@@ -11,11 +11,8 @@ $(document).ready(function() {
 		  $('#login_user').text(data.login_user);
 	      $("#login_user_right").html(data.login_user);
 		  $("#login_user_avatar").html(data.name_user);
-		  return;
-		} else {
-		  window.location.href = "http://cdcom.dynalias.com/facturalion2/includes_php_fac/_logout.php";
-		  return;	
 		}
+		return;		
 	}).fail(function(xhr, textStatus, errorThrown) {
 	  alert(errorThrown);
 	}).always(function() {
@@ -121,16 +118,31 @@ $(document).ready(function() {
 	   $("#passw").val("");
 	   $("#verify").val("");   
      });	 
- 
-
-	 
+  
 	$(document).on("click", "#asign_pattern", function() {
-		//var sel_action = $('#asign_pattern').attr("value");
-		//if(sel_action == "asign"){
-	   	window.location.href = "http://cdcom.dynalias.com/facturalion2/profile_pattern_create.html";
+	   	window.location = "profile_pattern_create.html";
 		return;
 	});		 
-	 
+
+	$('#logout').on("click", function(){
+		$.ajax({
+		url: 'http://cdcom.dynalias.com/facturalion2/includes_php_fac/_logout.php',
+		dataType: 'json',
+		beforeSend: function(xhr) {
+		  $.spin('true');
+		}
+		}).done(function(data) {
+		   if(data.result == "Ok!"){
+		      window.location = "index.html";
+		   }
+		   return;
+		}).fail(function(xhr, textStatus, errorThrown) {
+		  alert(errorThrown);
+		}).always(function() {
+		   $.spin('false');
+		});
+	});	
+	
 });
 
 

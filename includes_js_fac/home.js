@@ -22,6 +22,25 @@ $(document).ready(function() {
 	});
 	
 	CargarDatosTimbrado();
+	
+	$('#logout').on("click", function(){
+		$.ajax({
+		url: 'http://cdcom.dynalias.com/facturalion2/includes_php_fac/_logout.php',
+		dataType: 'json',
+		beforeSend: function(xhr) {
+		  $.spin('true');
+		}
+		}).done(function(data) {
+		   if(data.result == "Ok!"){
+		      window.location = "index.html";
+		   }
+		   return;
+		}).fail(function(xhr, textStatus, errorThrown) {
+		  alert(errorThrown);
+		}).always(function() {
+		   $.spin('false');
+		});
+	});	
 	 
 });
 

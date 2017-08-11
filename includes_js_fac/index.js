@@ -27,10 +27,10 @@ $(document).ready(function() {
            code_error = 'Not connect';
 		   cont_error = 'Verify Network';
         } else if (jqXHR.status == 404) {
-           code_error = '[404]';
+           code_error = 'Code[404]';
 		   cont_error = 'Requested page not found';
         } else if (jqXHR.status == 500) {
-           code_error = '[500].';
+           code_error = 'Code[500].';
 		   cont_error = 'Internal Server Error';
         } else if (textStatus === 'parsererror') {
            code_error = 'ParseError';
