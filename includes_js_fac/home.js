@@ -36,7 +36,24 @@ $(document).ready(function() {
 		   }
 		   return;
 		}).fail(function(xhr, textStatus, errorThrown) {
-		  alert(errorThrown);
+		//textStatus
+		//jqXHR.responseText;
+        if (jqXHR.status === 0) {
+		   window.location.href = "page_000.html";
+        } else if (jqXHR.status == 404) {
+		   window.location.href = "page_404.html";
+        } else if (jqXHR.status == 500) {
+		   window.location.href = "page_500.html";
+        } else if (textStatus === 'parsererror') {
+			window.location.href = "page_jsonerror.html";
+        } else if (textStatus === 'timeout') {
+			window.location.href = "page_time_out.html";
+        } else if (textStatus === 'abort') {
+			window.location.href = "page_error.html";
+        } else {
+		   window.location.href = "page_unknown.html";
+        }
+		return;
 		}).always(function() {
 		   $.spin('false');
 		});

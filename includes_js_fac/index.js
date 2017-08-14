@@ -21,37 +21,24 @@ $(document).ready(function() {
 		}
 		return;	
 	}).fail(function(jqXHR, textStatus, errorThrown) {
-		var code_error = "";
-		var cont_error = "";
+		//textStatus
+		//jqXHR.responseText;
         if (jqXHR.status === 0) {
 		   window.location.href = "page_000.html";
         } else if (jqXHR.status == 404) {
-           code_error = 'Code[404]';
-		   cont_error = 'Requested page not found';
+		   window.location.href = "page_404.html";
         } else if (jqXHR.status == 500) {
-           code_error = 'Code[500].';
-		   cont_error = 'Internal Server Error';
+		   window.location.href = "page_500.html";
         } else if (textStatus === 'parsererror') {
-           code_error = 'ParseError';
-		   cont_error = 'Requested JSON parse failed.';
+			window.location.href = "page_jsonerror.html";
         } else if (textStatus === 'timeout') {
-           code_error = 'Error';
-		   cont_error = 'Time out';
+			window.location.href = "page_time_out.html";
         } else if (textStatus === 'abort') {
-           code_error = 'Error';
-		   cont_error = 'Abort';
+			window.location.href = "page_error.html";
         } else {
-           code_error = 'Uncaught Error';
-		   cont_error = jqXHR.responseText;
+		   window.location.href = "page_unknown.html";
         }
-		$.spin('false');
-		new PNotify({
-		    title: code_error,
-			text: cont_error,
-			type: 'error',
-			delay: 2500
-		});		  
-		return;	  
+		return;
 	}).always(function() {
 	   $.spin('false');
 	});	
